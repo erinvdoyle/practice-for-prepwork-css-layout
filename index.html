@@ -4,66 +4,73 @@
         <link rel="stylesheet" type="text/css" href="layout.css">
     </head>
     <body>
+        <div class="container">
         <form action="/form-handling-url" method="post">
             <fieldset>
             <legend>Add user</legend>
         
-            <div>
-                <label for="firstName">First name</label>
+            <div class= "input" style="order: 1">
+                <label for="firstName">First name: <br></label>
                 <input type="text" id="firstName" name="first_name">
             </div>
         
-            <div>
-                <label for="lastName">Last name</label>
+            <div class="input" style="order: 2">
+                <label for="lastName">Last name: <br></label>
                 <input type="text" id="lastName" name="last_name">
             </div>
         
-            <div>
-                <label for="email">Email</label>
+            <div class="input" style="order: 3">
+                <label for="email">Email: <br></label>
                 <input type="email" id="email" name="email_address">
             </div>
         
-            <div>
-                <label for="role">Status</label>
+            <div id="inline-container">
+                <div class="inline" style="order: 4">
+                <label for="role">Status:</label>
                 <select id="role" name="user_role_name">
                 <option value="student">Student</option>
                 <option value="instructor">Instructor</option>
                 <option value="guest">Guest</option>
                 </select>
+                </div>
+                <div class="inline" style="order: 5">
+                <label for="date">Date:</label>
+                <input type="date" id="date" name="date">
+                </div>
             </div>
             
-            <div>
-                <p>Choose your favorite Web language:</p>
+            <div id="language-container" style="order: 6">
+                <p>Choose your favorite language:</p>
+                <div class="language">
                 <input type="radio" id="html" name="fav_language" value="HTML">
                 <label for="html">HTML</label><br>
                 <input type="radio" id="css" name="fav_language" value="CSS">
                 <label for="css">CSS</label><br>
                 <input type="radio" id="javascript" name="fav_language" value="JavaScript">
                 <label for="javascript">JavaScript</label>
+                </div>
             </div>
-
-            <div>
-                <label for="comments">Comments</label>
+          <div id="comments-container">
+            <div class="comments" style="order: 7">
+                <label for="comments">Comments:</label>
                 <textarea id="comments" name="comments"></textarea>
             </div>
-
-            <div>
-                <label for="date">Date</label>
-                <input type="date" id="date" name="date">
             </div>
-
-            <div>
+        <div id="checkbox-container">
+            <div class="checkbox" style="order: 8">
                 <input type="checkbox" id="signup" name="signup" value="Signup">
-                <label for="signup">Sign up for news letter</label><br>
+                <label for="signup">Sign up for news</label><br>
                 <input type="checkbox" id="terms" name="terms" value="Terms">
-                <label for="terms"> Agree to terms and conditions</label>
+                <label for="terms"> Agree to terms</label>
             </div>
+        </div>
         
-            <div>
+            <div class="submit" style="order: 9">
                 <button type="submit">Submit</button>
             </div>
         
             </fieldset>
         </form>
+        </div>
     </body>
 </html>
